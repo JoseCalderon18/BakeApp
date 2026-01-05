@@ -1,11 +1,11 @@
 import React from 'react';
 import { TouchableOpacity, Text, View } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 interface BoxOptionProps {
   label: string;
   size: string;
-  icon: string;
+  icon: any;
   color: string;
   isSelected: boolean;
   onPress: () => void;
@@ -34,7 +34,7 @@ export const BoxOption = ({ label, size, icon, color, isSelected, onPress, viewM
         // Vista horizontal (columna) - icono al lado del texto
         <View className="flex-row items-center">
           <View className="bg-black/10 p-3 rounded-xl mr-4">
-            <Icon name={icon} size={26} color="#000" />
+            <MaterialIcons name={icon} size={26} color="#000" />
           </View>
           <View className="flex-1">
             <Text className="text-black text-lg font-bold">
@@ -45,16 +45,16 @@ export const BoxOption = ({ label, size, icon, color, isSelected, onPress, viewM
             </Text>
           </View>
           {isSelected ? (
-            <Icon name="check-circle" size={26} color="#000" />
+            <MaterialIcons name="check-circle" size={26} color="#000" />
           ) : (
-            <Icon name="radio-button-unchecked" size={26} color="#000" />
+            <MaterialIcons name="radio-button-unchecked" size={26} color="#000" />
           )}
         </View>
       ) : (
         // Vista vertical (grid) - icono arriba
         <View className="items-center">
           <View className="bg-black/10 p-5 rounded-2xl mb-4">
-            <Icon name={icon} size={40} color="#000" />
+            <MaterialIcons name={icon} size={40} color="#000" />
           </View>
           <Text className="text-black text-xl font-bold mb-2 text-center">
             {label}
@@ -65,11 +65,11 @@ export const BoxOption = ({ label, size, icon, color, isSelected, onPress, viewM
           <View className="mt-4">
             {isSelected ? (
               <View className="bg-black/20 px-5 py-2 rounded-full">
-                <Icon name="check-circle" size={24} color="#000" />
+                <MaterialIcons name="check-circle" size={24} color="#000" />
               </View>
             ) : (
               <View className="bg-black/10 px-5 py-2 rounded-full">
-                <Icon name="radio-button-unchecked" size={24} color="#000" />
+                <MaterialIcons name="radio-button-unchecked" size={24} color="#000" />
               </View>
             )}
           </View>

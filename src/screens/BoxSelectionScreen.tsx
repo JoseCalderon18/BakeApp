@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, ScrollView, SafeAreaView, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { BoxOption } from '../components/BoxOption';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export function BoxSelectionScreen() {
   const navigation = useNavigation();
@@ -45,7 +45,7 @@ export function BoxSelectionScreen() {
                 onPress={() => setViewMode(viewMode === 'column' ? 'grid' : 'column')}
                 className="bg-white/10 p-3 rounded-xl mr-3"
               >
-                <Icon 
+                <MaterialIcons 
                   name={viewMode === 'column' ? 'grid-view' : 'view-list'} 
                   size={24} 
                   color="#fff" 
@@ -55,7 +55,7 @@ export function BoxSelectionScreen() {
                 onPress={() => navigation.goBack()} 
                 className="bg-white/10 p-3 rounded-xl"
               >
-                <Icon name="arrow-back" size={24} color="#fff" />
+                <MaterialIcons name="arrow-back" size={24} color="#fff" />
               </TouchableOpacity>
             </View>
           </View>

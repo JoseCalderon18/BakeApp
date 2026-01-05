@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, SafeAreaView, TouchableOpacity, Image, Alert } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export function SummaryScreen() {
   const navigation = useNavigation();
@@ -92,7 +92,7 @@ export function SummaryScreen() {
               onPress={() => navigation.goBack()} 
               className="bg-white/10 p-3 rounded-xl"
             >
-              <Icon name="arrow-back" size={24} color="#fff" />
+              <MaterialIcons name="arrow-back" size={24} color="#fff" />
             </TouchableOpacity>
           </View>
           <View className="flex-row items-center">

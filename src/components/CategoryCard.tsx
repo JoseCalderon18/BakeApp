@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, Image } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 interface CategoryCardProps {
   title: string;
@@ -32,7 +32,7 @@ export const CategoryCard = ({ title, iconImage, bgColor, onPress }: CategoryCar
         />
       </View>
       <Text className="text-black text-lg font-bold flex-1">{title}</Text>
-      <Icon name="chevron-right" size={24} color="#000" />
+      <MaterialIcons name="chevron-right" size={24} color="#000" />
     </TouchableOpacity>
   );
 };

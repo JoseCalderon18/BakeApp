@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Alert } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 interface Record {
   id: string;
@@ -58,7 +58,7 @@ export const RecordCard = ({ record, onDelete }: RecordCardProps) => {
             className="bg-[#EF5350] p-2 rounded-xl"
             activeOpacity={0.8}
           >
-            <Icon name="delete" size={20} color="#fff" />
+            <MaterialIcons name="delete" size={20} color="#fff" />
           </TouchableOpacity>
         </View>
       </View>

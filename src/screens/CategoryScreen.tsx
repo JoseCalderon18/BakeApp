@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 import { CategoryCard } from '../components/CategoryCard';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export function CategoriesScreen() {
   const navigation = useNavigation();
@@ -61,7 +61,7 @@ export function CategoriesScreen() {
               onPress={() => navigation.goBack()} 
               className="p-2"
             >
-              <Icon name="arrow-back" size={28} color="#fff" />
+              <MaterialIcons name="arrow-back" size={28} color="#fff" />
             </TouchableOpacity>
           </View>
           <View className="flex-row items-center">

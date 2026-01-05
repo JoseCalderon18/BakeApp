@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView, SafeAreaView, TouchableOpacity, TextInput, Image } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export function ProductQuantityScreen() {
   const navigation = useNavigation();
@@ -52,7 +52,7 @@ export function ProductQuantityScreen() {
               onPress={() => navigation.goBack()} 
               className="bg-white/10 p-3 rounded-xl"
             >
-              <Icon name="arrow-back" size={24} color="#fff" />
+              <MaterialIcons name="arrow-back" size={24} color="#fff" />
             </TouchableOpacity>
           </View>
           <View className="flex-row items-center">

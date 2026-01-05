@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import Icon from 'react-native-vector-icons/MaterialIcons'; 
+import { MaterialIcons } from '@expo/vector-icons'; 
 
 
 type RootStackParamList = {
@@ -56,7 +56,7 @@ export function HomeScreen() {
               onPress={handleCalculatePress}
               activeOpacity={0.8}
             >
-              <Icon name="calculate" size={26} color="#000" />
+              <MaterialIcons name="calculate" size={26} color="#000" />
               <Text className="text-black text-lg font-medium ml-3">
                 Calcular
               </Text>
@@ -68,7 +68,7 @@ export function HomeScreen() {
               style={{ backgroundColor: '#66BB6A' }}
               onPress={() => (navigation as any).navigate('Records')}
             >
-              <Icon name="history" size={26} color="#000" />
+              <MaterialIcons name="history" size={26} color="#000" />
               <Text className="text-black text-lg font-medium ml-3">
                 Ver Registros
               </Text>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, SafeAreaView, TouchableOpacity, FlatList, Modal, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 import { RecordCard } from '../components/RecordCard';
 
 interface Record {
@@ -245,7 +245,7 @@ export function RecordsScreen() {
               onPress={() => navigation.goBack()} 
               className="bg-white/10 p-3 rounded-xl"
             >
-              <Icon name="arrow-back" size={24} color="#fff" />
+              <MaterialIcons name="arrow-back" size={24} color="#fff" />
             </TouchableOpacity>
           </View>
           <View className="flex-row items-center">
@@ -281,12 +281,12 @@ export function RecordsScreen() {
             className="bg-white/10 flex-row items-center justify-between p-4 rounded-xl"
           >
             <View className="flex-row items-center">
-              <Icon name="calendar-today" size={24} color="#4FC3F7" />
+              <MaterialIcons name="calendar-today" size={24} color="#4FC3F7" />
               <Text className="text-white text-base font-semibold ml-3">
                 {selectedDate || 'Seleccionar fecha'}
               </Text>
             </View>
-            <Icon name="arrow-forward-ios" size={20} color="#fff" />
+            <MaterialIcons name="arrow-forward-ios" size={20} color="#fff" />
           </TouchableOpacity>
         </View>
 
@@ -305,7 +305,7 @@ export function RecordsScreen() {
                   onPress={() => changeMonth('prev')}
                   className="bg-white/10 p-2 rounded-xl"
                 >
-                  <Icon name="chevron-left" size={24} color="#fff" />
+                  <MaterialIcons name="chevron-left" size={24} color="#fff" />
                 </TouchableOpacity>
                 
                 <Text className="text-white text-xl font-bold">
@@ -316,7 +316,7 @@ export function RecordsScreen() {
                   onPress={() => changeMonth('next')}
                   className="bg-white/10 p-2 rounded-xl"
                 >
-                  <Icon name="chevron-right" size={24} color="#fff" />
+                  <MaterialIcons name="chevron-right" size={24} color="#fff" />
                 </TouchableOpacity>
               </View>
 
@@ -420,7 +420,7 @@ export function RecordsScreen() {
           />
         ) : (
           <View className="items-center py-12">
-            <Icon name="inbox" size={64} color="#666" />
+            <MaterialIcons name="inbox" size={64} color="#666" />
             <Text className="text-gray-500 text-lg mt-4 text-center">
               No hay registros guardados
             </Text>
